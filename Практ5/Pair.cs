@@ -7,7 +7,7 @@ using System.Windows;
 
 namespace Практ5
 {
-     class Pair
+    class Pair
     {
         private int para1;
         private int para2;
@@ -22,7 +22,7 @@ namespace Практ5
             }
             set
             {
-                if (value % 2 == 0)
+                if (value != 0 && value % 2 == 0)
                 {
                     para1 = value;
                 }
@@ -41,7 +41,7 @@ namespace Практ5
             }
             set
             {
-                if (value % 2 == 0)
+                if (value != 0 && value % 2 == 0)
                 {
                     para2 = value;
                 }
@@ -54,23 +54,29 @@ namespace Практ5
         /// <summary>
         /// Умножение эллементов пары (a,b)=(a*b)
         /// </summary>
-        /// <param name="value1">Объекты пары 1</param>
-        /// <param name="par1">Возвращаемое значение умножения эллемента 1 первой пары на эллемент 1 первой пары</param>
-        public void multiplication(Pair value1, out int par1)
+        /// <param name="value1">Объект пары 1</param>
+        /// <returns>result Возвращаемое значение операции произведения одной пары</returns>
+        public Pair multiplication(Pair value1)
         {
-            par1 = value1.Para1 * value1.Para2;
+            Pair result = new Pair();
+            result.para1 = value1.Para1 * value1.Para2;
+            return result;
+
         }
         /// <summary>
-        /// Умножение пар на соответствующие им эллементы (a,b)*(c,d)=(a*c,b*d)
+        /// Операция произведения значений двух пар (a,b) * (c,d) = (a*c);(b*d)
         /// </summary>
-        /// <param name="value1">Объекты пары 1</param>
-        /// <param name="value2">Объекты пары 2</param>
-        /// <param name="par1">Возвращаемое значение умножения эллемента 1 первой пары на эллемент 1 второй пары</param>
-        /// <param name="par2">Возвращаемое значение умножения эллемента 2 первой пары на эллемент 2 второй пары</param>
-        public void multiplication(Pair value1, Pair value2, out int par1,out int par2)
+        /// <param name="value1">Объект пары 1</param>
+        /// <param name="value2">Объект пары 2</param>
+        /// <returns>Возвращаемое значение result результат операции произведения двух пар</returns>
+        public Pair multiplication(Pair value1, Pair value2)
         {
-            par1 = value1.Para1 * value2.Para1;
-            par2 = value1.Para2 * value2.Para2;
+            Pair result = new Pair();
+            result.para1 = value1.Para1 * value2.Para1;
+            result.para2 = value1.Para2 * value2.Para2;
+            return result;
         }
+
     }
 }
+
