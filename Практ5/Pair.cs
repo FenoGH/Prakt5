@@ -52,10 +52,19 @@ namespace Практ5
             }
         }
         /// <summary>
-        /// 
+        /// Умножение эллементов пары (a,b)=(a*b)
         /// </summary>
-        /// <param name="value1">Объект пары 1</param>
-        /// <param name="value2">Объект пары 2</param>
+        /// <param name="value1">Объекты пары 1</param>
+        /// <param name="par1">Возвращаемое значение умножения эллемента 1 первой пары на эллемент 1 первой пары</param>
+        public void multiplication(Pair value1, out int par1)
+        {
+            par1 = value1.Para1 * value1.Para2;
+        }
+        /// <summary>
+        /// Умножение пар на соответствующие им эллементы (a,b)*(c,d)=(a*c,b*d)
+        /// </summary>
+        /// <param name="value1">Объекты пары 1</param>
+        /// <param name="value2">Объекты пары 2</param>
         /// <param name="par1">Возвращаемое значение умножения эллемента 1 первой пары на эллемент 1 второй пары</param>
         /// <param name="par2">Возвращаемое значение умножения эллемента 2 первой пары на эллемент 2 второй пары</param>
         public void multiplication(Pair value1, Pair value2, out int par1,out int par2)

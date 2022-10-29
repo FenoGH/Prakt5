@@ -74,5 +74,21 @@ namespace Практ5
         {
             rd1.Clear();rd2.Clear();rd3.Clear();rd4.Clear();Rez.Clear();
         }
+
+        private void MultiOnePairClick(object sender, RoutedEventArgs e)
+        {
+            Rez.Clear();
+            int.TryParse(rd1.Text, out int ch1); int.TryParse(rd2.Text, out int ch2);
+                if (ch1 % 2 == 0 && ch2 % 2 == 0)
+                {
+                    firstpara.Para1 = ch1; firstpara.Para2 = ch2;
+                thirdpara.multiplication(firstpara, out int par1);
+                    Rez.Text = Convert.ToString($"Созданная пара ({firstpara.Para1};{firstpara.Para2}) \nРезультат умножения пары {par1}");
+                }
+                else
+                {
+                    firstpara.Para1 = ch1; firstpara.Para2 = ch2;
+                }
+        }
     }
 }

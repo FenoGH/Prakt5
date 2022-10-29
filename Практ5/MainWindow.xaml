@@ -17,6 +17,7 @@
         <Menu HorizontalAlignment="Left" VerticalAlignment="Top" Background="Aquamarine">
             <MenuItem Header="Меню">
                 <MenuItem Header="Вывести пару" Click="OneParaClick" Background="Aquamarine"></MenuItem>
+                <MenuItem Header="Рассчитать произв. 1 пары" Click="MultiOnePairClick" Background="Aquamarine"></MenuItem>
                 <MenuItem Header="Рассчитать произв. 2ух пар" Click="Calculate_Click" Background="Aquamarine"></MenuItem>
             </MenuItem>
             <MenuItem Header="Очистка" Click="ClearClick" Background="Aquamarine"></MenuItem>
